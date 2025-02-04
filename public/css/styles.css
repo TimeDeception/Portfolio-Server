@@ -1,0 +1,289 @@
+body {
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  color: black;
+  background-color: whitesmoke;
+}
+
+.Navigation {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 150px;
+  height: 100vh;
+  background-color: rgb(163, 6, 163);
+  padding: 20px;
+  z-index: 1000;
+  overflow-y: auto;
+  transition: transform 0.3s ease-in-out;
+}
+
+.Navigation nav ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.Navigation nav ul li {
+  margin-bottom: 20px; /* Adjusted spacing */
+}
+
+.Navigation nav ul li a {
+  display: block;
+  width: 100%;
+  color: black;
+  text-decoration: none;
+  text-align: center;
+}
+
+.menu-toggle {
+  display: none;
+}
+
+.nav-links {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.sidebar {
+  display: none;
+  position: fixed;
+  justify-content: center;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 250px;
+  z-index: 999;
+  background-color: rgba(163, 6, 163, 0.659);
+  backdrop-filter: blur(10px);
+  box-shadow: rgb(0, 0, 0, 0.1);
+}
+
+.sidebar button {
+  padding-left: 20px;
+  background-color: transparent;
+  border: none;
+}
+
+.sidebar ul li :first-child {
+  padding-top: 15px;
+}
+
+@media only screen and (max-width: 768px) {
+  .Navigation {
+    width: 100%;
+    height: 30px;
+    padding: 20px 0;
+  }
+
+  .HideOnMobile {
+    display: none;
+  }
+  .Navigation {
+    flex-direction: column;
+    align-items: center;
+  }
+  .menu-toggle {
+    display: flex;
+    align-self: flex-start;
+    padding-left: 10px;
+  }
+}
+
+main {
+  padding-left: 200px;
+  padding-top: 20px;
+}
+
+@media screen and (max-width: 768px) {
+  main {
+    padding-left: 0; /* Reset padding on smaller devices */
+    padding-top: 85px;
+  }
+}
+
+@media screen and (max-width: 350px) {
+  .sidebar {
+    width: 100%;
+  }
+}
+
+.Navigation nav ul li a img {
+  height: 60px;
+  width: 60px;
+  border: none;
+  padding: 5px;
+}
+
+.Navigation nav ul li a img:hover {
+  background-color: gray;
+  border-radius: 25%;
+}
+
+main section {
+  background-color: white; /* Adding a background color for better contrast */
+  margin: 20px auto;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  max-width: 800px; /* Limiting the width for better readability */
+}
+
+main section h1,
+main section h2,
+main section h3,
+main section h4 {
+  margin-top: 0;
+}
+
+main section p {
+  text-align: left;
+  line-height: 1.6;
+}
+
+main section ul {
+  list-style-type: disc;
+  padding-left: 40px;
+}
+
+main section ul h4 {
+  margin-top: 10px;
+}
+
+main section ul li {
+  margin-bottom: 5px;
+}
+
+#AboutMe {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+#AboutMe img {
+  border: 2px;
+  border-style: ridge;
+  border-radius: 50%;
+  border-color: black;
+  height: 250px;
+  width: 250px;
+}
+
+#AboutMe h1 {
+  align-self: center;
+}
+
+#AboutMe section {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  margin-top: 20px;
+}
+
+#AboutMe section h2 {
+  display: flex;
+}
+
+#AboutMe section ul {
+  text-align: start;
+}
+
+#AboutMe section ul:last-child {
+  padding-left: 60px;
+}
+#Contact {
+  padding: 20px;
+}
+
+.contact-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 20px; /* Space between the form and the social media icons */
+}
+
+#Contact form {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  max-width: 400px; /* Adjust as needed */
+}
+
+#Contact label {
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+#Contact input[type="email"],
+#Contact input[type="text"],
+#Contact textarea {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+#Contact input[type="submit"] {
+  padding: 10px 20px;
+  background-color: purple;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+#Contact input[type="submit"]:hover {
+  background-color: darkviolet;
+}
+
+#Contact aside {
+  flex: 1;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+#Contact .social-media-icons {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+.social-media-icons {
+  flex-direction: column;
+}
+.social-media-icons a {
+  color: black; /* Initial color */
+  transition: color 0.3s ease; /* Smooth transition */
+}
+.social-media-icons a:hover {
+  color: purple;
+}
+#Contact .social-media-icons a img {
+  width: 50px;
+  height: 50px;
+}
+
+@media screen and (max-width: 768px) {
+  .contact-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #Contact form,
+  #Contact aside {
+    max-width: 100%;
+  }
+  .social-media-icons {
+    flex-direction: row;
+  }
+}
+
+@media (max-width: 768px) {
+  #AboutMe section {
+    flex-direction: column;
+    align-items: center;
+  }
+}
