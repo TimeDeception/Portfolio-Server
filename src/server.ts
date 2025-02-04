@@ -6,13 +6,15 @@ import { Response } from "express";
 const express = require("express");
 const path = require("path");
 const server = express();
-const portnum = 8080;
+const PORT = 8080;
 
 server.use(express.static(path.join(__dirname, "../public")));
 
 //Server web serving services
-server.get("/", (req: Request, res: Response) => {});
+server.get("/api/greeting", (req: Request, res: Response) => {
+  res.json({ message: "Hello this is a routeing test" });
+});
 
-server.listen(portnum, () => {
-  console.log("Running on http://localhost:${portnum}");
+server.listen(PORT, () => {
+  console.log("Running on http://localhost:" + PORT);
 });

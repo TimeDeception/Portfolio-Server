@@ -1,14 +1,15 @@
-"use strict";
 //If using mac make sure Icloud sync is off for easier git control
 Object.defineProperty(exports, "__esModule", { value: true });
 //Constant variables
 const express = require("express");
 const path = require("path");
 const server = express();
-const portnum = 8080;
+const PORT = 8080;
 server.use(express.static(path.join(__dirname, "../public")));
 //Server web serving services
-server.get("/", (req, res) => { });
-server.listen(portnum, () => {
-    console.log("Running on http://localhost:${portnum}");
+server.get("/api/greeting", (req, res) => {
+  res.json({ message: "Hello this is a routeing test" });
+});
+server.listen(PORT, () => {
+  console.log("Running on http://localhost:" + PORT);
 });
