@@ -1,16 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+  <head cross-origin-resource-policy: same-site>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
     <title>Martin's Portfolio</title>
     <link rel="stylesheet" href="/css/styles.css" />
   </head>
   <body id="web-container">
     <main>
       <div id="main-header">
-        <img id="aboutme" src="/" alt="Resume photo" />
-        <h1>Hey, I'm Martin Silva</h1>
+        <div id="aboutme-header">
+          <img
+            id="about-img"
+            src="images/PortfolioPhoto.jpg"
+            alt="Resume photo"
+          />
+          <h1>Martin J. Silva</h1>
+          <a href="https://github.com/TimeDeception">GitHub Link</a>
+        </div>
         <section id="AboutMe">
           <p>
             I'm an aspiring web developer, I developed a fasination for
@@ -49,16 +57,20 @@
         </section>
         <section id="ProjectContainer">
           <h1 class="grid-header">Projects</h1>
-          <div class="CardContainer">
+          <div class="Cards" id="CardContainer1">
+            <img src="none" alt="Homelab project" />
             <p>Projects are in the making.</p>
           </div>
-          <div class="CardContainer">
+          <div class="Cards" id="CardContainer2">
+            <img src="none" alt="Recipe app project" />
             <p>Projects are in the making.</p>
           </div>
-          <div class="CardContainer">
+          <div class="Cards" id="CardContainer3">
+            <img src="none" alt="Eve Api project" />
             <p>Projects are in the making.</p>
           </div>
-          <div class="CardContainer">
+          <div class="Cards" id="CardContainer4">
+            <img src="none" alt="Your project" />
             <p>Projects are in the making.</p>
           </div>
         </section>
@@ -94,7 +106,7 @@
                   </svg>
                 </a>
                 <a
-                  href="https://www.instagram.com/the1_andonly_fans"
+                  href="https://www.instagram.com/celestial_desolation"
                   target="_blank"
                 >
                   <svg
